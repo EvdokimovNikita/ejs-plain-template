@@ -1,0 +1,17 @@
+<div class="cards-flex-container">
+  <% cards.forEach(card => { %>
+
+    <div class="card" style="width: 18rem">
+        <img src="<%= card.cardImg %>" class="card-img-top" alt="<%= card.alt %>" />
+        <div class="card-body">
+        <p class="card-text">
+            <i class="<%= card.icon %>"></i>
+            <%= card.name %>
+            <i class="fas fa-comment"> <%= card.comments %> </i>
+            <i class="fas fa-heart"> <%= card.like %> </i>
+        </p>
+        </div>
+    </div>
+
+  <% }); %>
+</div>

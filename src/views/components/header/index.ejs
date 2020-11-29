@@ -1,0 +1,17 @@
+<header>
+  <i class="fas fa-align-justify"></i>
+  <!-- <img src="../../public/imgs/logo.png" alt="" /> -->
+  <div id="schel">
+  <input class="input_header style" width="20px" height="20px"></input>
+  </div>
+  <button id="chek"><i  class="fas fa-neuter"></i></button>
+  <div id="ssilka"><a href="#">Sign in</a></div>
+
+  <h1><%= title %></h1> 
+  <h1>Сделно : <%= author %></h1> 
+  <% for (var a = 0; a < keywords.length; a++) { %> 
+    <b>
+      <%= keywords[a] %>
+    </b>
+  <% } %>
+</header>

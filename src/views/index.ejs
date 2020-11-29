@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(
+    './components/head.ejs', 
+    {
+      title: 'Demo Dribble Page',
+      author: 'Jun Zhenya',
+      keywords: ['lorem', 'ipsum', 'dolor', 'sit', 'amet'],
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    }
+  ) -%>
+  <body>
+    <%- include(
+      './components/header/index.ejs', 
+      {
+        title: 'Demo Dribble Page',
+        author: 'Jun Zhenya',
+        keywords: ['lorem', 'ipsum', 'dolor', 'sit', 'amet'],
+        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+      }
+    ) -%>
+    <main>
+      <div class="header_img_container">
+        <img
+          src="https://static.dribbble.com/assets/art-banners/romainbriaux-9270a203743088cf36b939b04708d9a18fa794e04373964283a2d87c8f6fba0f.png"
+          alt="">
+
+        <h1>Discover the world’s top designers & creatives</h1>
+        <p>
+          Dribbble is the leading destination to find & showcase creative work
+          and home to the world's best design professionals.
+        </p>
+        <button type="button" class="btn btn-danger" id="singUpButton">Sing up</button>
+        <br />
+        <span> Art by <a href="">Romain Briaux</a> </span>
+      </div>
+
+      <div class="filter_container">
+        <!-- DROPDOWN -->
+      
+      <button id="button">Dropdown</button>
+      
+      <ul id="ul">
+          <li id="li">Popular</li>
+          <li id="li">New</li>
+          <li id="li">Good</li>
+      </ul>
+
+
+      <!-- NAVIGATION -->
+      <%- include(
+        './components/navigation/index.ejs', 
+        {
+          navigation: [
+            'All', 
+            'Animation',
+            'Branding', 
+            'Illustrations', 
+            'Mobile', 
+            'Print', 
+            'Product Design', 
+            'Typography', 
+            'Web Design Initgit'
+          ],
+        }
+      ) -%>
+
+        <!-- RIGHT BUTTON -->
+        <button id="button1">Filter</button>
+      
+     
+      
+      
+      <div id="tag">
+        <div class="tags">
+          <p class="pp">Tags</p>
+        <input class="style"> </input>
+        </div>
+
+        <div class="color">
+        <p class="pp">Color</p> 
+        <input class="style"></input>
+       </div>
+        
+        <div class="time">
+        <p class="pp">Timeframe</p>
+        <button class="button-style">Now</button>
+        </div>
+
+        <div class="madewith">
+        <p class="pp">Made With</p>
+        <button class="button-style">All apps</button>
+        </div>
+
+        <div class="download">
+        <p class="pp">Downloads</p>
+        <button class="button-style">All shots</button>
+        </div>
+      </div>
+      <%- include('./components/cardsList/index.ejs', {
+        cards: [
+          { 
+            cardImg: 'https://w7.pngwing.com/pngs/468/243/png-transparent-computer-icons-logo-icon-ig-logo-black-instagram.png', 
+            alt: 'instagram', 
+            icon: 'fas fa-ambulance', 
+            name: 'Ambulance studio ', 
+            like: '104', 
+            comments: '22' 
+          },
+          { 
+            cardImg: 'https://w7.pngwing.com/pngs/713/815/png-transparent-whatsapp-iphone-whatsapp-logo-monochrome-black.png', 
+            alt: 'whatsup', 
+            icon: 'fab fa-cc-amex', 
+            name: 'American express ', 
+            like: '1204', 
+            comments: '222' 
+          },
+          { 
+            cardImg: 'https://w7.pngwing.com/pngs/645/890/png-transparent-computer-icons-logo-whatsapp-whatsapp-text-logo-whatsapp-icon.png', 
+            alt: 'whatsup colored', 
+            icon: 'fab fa-cc-amex', 
+            name: 'American express ', 
+            like: '321', 
+            comments: '11' 
+          },
+          { 
+            cardImg: 'https://w7.pngwing.com/pngs/468/243/png-transparent-computer-icons-logo-icon-ig-logo-black-instagram.png', 
+            alt: 'instagram', 
+            icon: 'fas fa-ambulance', 
+            name: 'Ambulance studio ', 
+            like: '104', 
+            comments: '22' 
+          },
+          { 
+            cardImg: 'https://w7.pngwing.com/pngs/713/815/png-transparent-whatsapp-iphone-whatsapp-logo-monochrome-black.png', 
+            alt: 'whatsup', 
+            icon: 'fab fa-cc-amex', 
+            name: 'American express ', 
+            like: '1204', 
+            comments: '222' 
+          },
+          { 
+            cardImg: 'https://w7.pngwing.com/pngs/645/890/png-transparent-computer-icons-logo-whatsapp-whatsapp-text-logo-whatsapp-icon.png', 
+            alt: 'whatsup colored', 
+            icon: 'fab fa-cc-amex', 
+            name: 'American express ', 
+            like: '321', 
+            comments: '11' 
+          } 
+        ]}
+      );
+      -%>
+
+    </main>
+    <%- include('./components/footer/index.ejs') -%>
+  </body>
+</html>

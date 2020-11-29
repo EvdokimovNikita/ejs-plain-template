@@ -1,0 +1,25 @@
+<% footerMenu.forEach( element => { %> 
+    <div class="columb">
+      <ul class="two-colum colum">
+
+        <% element.forEach( val => { %>
+          <li>
+            <!-- If not title -->
+            <% if (val.isLink) { %> 
+              <a href="">
+            <% } %>
+            
+            <!-- Element column text -->
+            <%= val.text %>
+            
+            <!-- If not title -->
+            <% if (val.isLink) { %> 
+              </a>
+            <% } %>
+
+          </li>
+        <% }) %>
+
+      </ul>
+    </div>
+  <% }); %> 
